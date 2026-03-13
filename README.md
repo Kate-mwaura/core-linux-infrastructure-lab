@@ -85,3 +85,36 @@ This serves as both a learning archive and a long-term reference I will continue
 | `wc` | print the number of lines, number of words and number of characters in a file. | `wc -l` | print the number of (l)lines only in a file. |
 |  |  | `wc -w` | print the number of (w) in the file. |
 |  |  | `wc -c` | print the number of (c) characters/letters in a file. |
+---
+
+## 3. Search & Discovery
+
+| Command | My Definition / Logic | Flag / Example | Flag Definition |
+|---|---|---|---|
+| `grep` | search for a specific pattern in a file. |  |  |
+|  |  | `grep -v` | search a pattern in a file and exclude it in the output. |
+|  |  | `grep -i` | search for a pattern and ignore the case. |
+|  |  | `grep -n` | search a pattern and print the output with numbered lines. |
+|  |  | `grep -r` | search a pattern in the entire directory and all directories and files in it (r) recursively. |
+|  |  | `grep -c` | count the matches. |
+|  |  | `grep -l` | show files containing matches. |
+|  |  | `grep -E "word1\|word2\|word3" file_name` | search either of the words. |
+|  |  | `grep "word1" \| grep "word2"` | Only shows lines that have BOTH keywords. |
+|  |  | `grep -e "word1" -e "word 2" file_name` | finds lines containing "word1" OR "word2" |
+|  |  | `grep -f file_input.txt search_file` | using a file with all the list of words to search |
+| `find` | search for a pattern in the system |  |  |
+|  |  | `find /path/ -name (name)` | search by name |
+|  |  | `find /path/ -type (f/d)` | search by type file or directory |
+|  |  | `find /path -size` | search by size |
+|  |  | `find /path -iname` | search by name and ignore the case. |
+|  |  | `find /path/ -mtime` | search by modification time |
+|  |  | `find /path/ -type (f/d) -name  …. '-exec' command {}+` | finding a file or directory and executing commands to the output. |
+|  |  | `-size unit & suffix` | c=bytes M=megabytes k=kilobytes G=gigabytes b=blocks |
+| `locate` | search the location of a file in the system | `locate file.sh` |  |
+|  |  | `locate -i` | search file location and ignore case. |
+| `which` | search the executable path of a command. |  |  |
+| `whereis` | search for a path of a command and returns all relevant paths. |  |  |
+| `who -b` | view when the system was started. |  |  |
+
+<p align="right"><a href="#kathys-linux-command-reference-for-devops">⬆ Back to Top</a></p>
+
