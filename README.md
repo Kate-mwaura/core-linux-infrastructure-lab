@@ -115,6 +115,49 @@ This serves as both a learning archive and a long-term reference I will continue
 | `which` | search the executable path of a command. |  |  |
 | `whereis` | search for a path of a command and returns all relevant paths. |  |  |
 | `who -b` | view when the system was started. |  |  |
+---
+
+## 4. Text Processing Power
+
+| Command | My Definition / Logic | Flag / Example | Flag Definition |
+|---|---|---|---|
+| `sort` | arranging an output in a certain order. |  |  |
+|  |  | `sort -n` | sort a file in a (n)numeric order. |
+|  |  | `sort -u` | sort a file outputting only the unique lines. |
+|  |  | `sort -r` | sort a file in (r)reverse/descending order |
+|  |  | `sort -f` | sort a file and ignore the case. |
+|  |  | `sort -b` | ignore preceding spaces. |
+|  |  | `sort -o [new_output_file] [input_file]` | sort a file and store the output in a specified file. |
+| `uniq` | filters identical lines in a file. The uniq command is more powerful combined with the sort command. |  |  |
+|  |  | `uniq -c` | count how many times a line has been repeated in a file. |
+|  |  | `uniq -d` | show lines that have been repeated. |
+|  |  | `uniq -u` | show uniq lines that have appeared only once i.e. have not been repeated. |
+|  |  | `uniq -i` | show identical lines and ignore the case. |
+| `cut` | cut out specific fields from files. |  |  |
+|  |  | `cut -d` | specify a diameter separator [cut -d “:”] |
+|  |  | `cut -f` | specify the field to output from a file [cut -f 1,3 or cut -f 1-3] |
+|  |  | `cut -c` | outputs specific characters from a file [cut -c 1-5 or cut -c 2,4,7] |
+| `tr` | translate characters: run replacements based on single characters and character sets. |  |  |
+|  |  | `tr [:lower:] [:upper:]` | changing characters from lowercase to uppercase. |
+|  |  | `tr -d` | delete characters [tr -d ‘,’ or for multiple characters tr -d ‘>{};?’ ] |
+|  |  | `tr -s` | squeeze characters i.e remove duplicate characters. |
+|  |  | `tr “char1” “char2”` | replace characters with different characters. |
+| `diff` | highlight the differences between  files. |  |  |
+|  |  | `a` | added:: content was added. |
+|  |  | `d` | deleted:: content was removed. |
+|  |  | `c` | changed:: content was modified. |
+|  |  | `<` | less than:: shows lines from the first file. |
+|  |  | `>` | greater than:: shows lines from the second file. |
+|  |  | `diff [file1] [file2]` | check the difference between the two files. |
+|  |  | `diff -s` | check if files are same/identical. |
+|  |  | `diff -y` | show the difference side by side. |
+|  |  | `diff -i` | ignore case. |
+|  |  | `diff -u` | output the difference using the + and - symbols. |
+|  |  | `diff -q` | only check if the files differ, not how. |
+|  |  | `diff -w` | ignore extra spaces and tabs. |
+|  |  | `diff -B` | ignore blank lines. |
+| `awk` | awk is a command used to filter and extract a certain column of data from a file | `awk ‘{print $column_no}’ file/path` | This will print words in the third column in a file extracted from every line. |
+| `sed` | sed is used to replace a certain word in a file with a new one or remove it completely. Essential for words repeated multiple times in a file. | `sed  -i ‘s/pineapple/mango/’ file/path` | [-i →ensures changes are saved in the file, g(global) |
 
 <p align="right"><a href="#kathys-linux-command-reference-for-devops">⬆ Back to Top</a></p>
 
