@@ -303,3 +303,36 @@ This serves as both a learning archive and a long-term reference I will continue
 | `renice` | setting the priority value of an existing process. | `renice 5 1234` | change priority of running process |
 |  |  | `sudo renice -n 0 -p PID` | setting the priority and nice value of an existing process referencing the PID of the process. |
 <p align="right"><a href="#kathys-linux-command-reference-for-devops">⬆ Back to Top</a></p>
+---
+
+## 11. Networking
+
+| Command | My Definition / Logic | Flag / Example | Flag Definition |
+|---|---|---|---|
+| `ping` | checking the connectivity, reachability & response rate(latency) of a host e.g. server. | `ping -c` | specify the number of ICMP(Internet Control Message protocol) to send to the host. |
+|  |  | `ping -i` | sets the wait time between packets sent to the host. |
+|  |  | `ping -t` | sets how long to wait for a response before giving up. |
+| `curl` | communicating with servers. | `curl -o` | downloading files from the internet. [curl -o filename url] |
+|  |  | `curl -I` | requests only for the header of a webpage. |
+|  |  | `curl -v` | verbose the output and show the request and response. |
+| `wget` | downloads files from a server. | `wget -O` | setting the custom name for a download file. [wget -O customname url] |
+|  |  | `wget -P` | setting a (p)path to where you want to store the download file |
+|  |  | `wget -c` | (c)continue a download that is incomplete |
+|  |  | `wget -i` | download urls contained in a file [wget -i file1.txt] |
+|  |  | `wget -b` | set a download to run in the (b) background. |
+| `ss` | show socket statistics. | `ss -t` | show all sockets on TCP connection. |
+|  |  | `ss -u` | show all sockets on UDP connection. |
+|  |  | `ss -s` | show overall statistics of the socket connection. |
+|  |  | `ss -l` | show all sockets that are actively listening. |
+|  |  | `ss -4` | show all ipv4 sockets. |
+|  |  | `ss -6` | show all ipv6 sockets. |
+|  |  | `ss --listening src :portno` | check which services are listening to a specific port. |
+|  |  | `ss -tulpn` | show listening ports with associated processes. |
+| `ip` | show information about the ip addresses connected. | `ip a` | display all network interfaces and IP addresses. |
+|  |  | `ip addr show dev [interface_name]` | show info about a specific device. |
+|  |  | `sudo ip link set [interface_name] down` | setting a specific interface down. |
+|  |  | `sudo ip link set [interface_name] up` | setting a specific interface up. |
+|  |  | `sudo ip addr add [ip_no] dev [interface_name]` | adding an ip address to the server. |
+|  |  | `sudo ip addr del [ip_no] dev [interface_name]` | removing an ip address from the server. |
+|  |  | `ip route show` | print routing table. |
+<p align="right"><a href="#kathys-linux-command-reference-for-devops">⬆ Back to Top</a></p>
