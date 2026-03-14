@@ -218,5 +218,21 @@ This serves as both a learning archive and a long-term reference I will continue
 | `sudo useradd -M username` | creating a user without a home directory. | `sudo useradd -M ci-runner` | create service user without login environment |
 | `sudo useradd -s path/nologin username` | creating a non-interactive user. | `sudo useradd -s /usr/sbin/nologin backupsvc` | create non-interactive backup user |
 | `sudo useradd -r -M -s /usr/sbin/nologin servicename` | creating a service account. | `sudo useradd -r -M -s /usr/sbin/nologin node_exporter` | create secure service account for monitoring |
+<p align="right"><a href="#kathys-linux-command-reference-for-devops">⬆ Back to Top</a></p>
+---
 
+## 8. Password & Authentication
+
+| Command | My Definition / Logic | Flag / Example | Flag Definition |
+|---|---|---|---|
+| `sudo chage -l username` | viewing account passwd aging details list. | `sudo chage -l deploy` | display password aging information for the deploy user |
+| `sudo chage -M days username` | setting when a Password expires. | `sudo chage -M 90 deploy` | set password to expire after 90 days |
+| `sudo chage -M -1 username` | setting password expiry to never. | `sudo chage -M -1 serviceuser` | disable password expiration for a service account |
+| `sudo chage -W days username` | setting number of days of warning before password expires. | `sudo chage -W 7 deploy` | warn the user 7 days before password expiration |
+| `sudo chage -m days username` | setting the number of days a user has to wait to change the password again. | `sudo chage -m 2 deploy` | enforce minimum 2 days between password changes |
+| `passwd -l username` | Locking a user’s account. | `sudo passwd -l olduser` | lock an inactive user account |
+| `passwd -u username` | unlocking a user’s password. | `sudo passwd -u deploy` | unlock a user account |
+| `passwd -S username` | viewing passwd status of a  user. | `passwd -S deploy` | show password status information |
+| `passwd -x days username` | adding an expiration day to a passwd. | `sudo passwd -x 120 deploy` | set password expiration after 120 days |
+| `passwd -d username` | deleting a user's passwd. | `sudo passwd -d tempuser` | remove password requirement from a temporary user |
 <p align="right"><a href="#kathys-linux-command-reference-for-devops">⬆ Back to Top</a></p>
