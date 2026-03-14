@@ -396,7 +396,25 @@ This serves as both a learning archive and a long-term reference I will continue
 <p align="right"><a href="#kathys-linux-command-reference-for-devops">⬆ Back to Top</a></p>
 ---
 
-## 14. Package Management
+## 14. System & Service Management
+
+| Command | My Definition / Logic | Flag / Example | Flag Definition |
+|---|---|---|---|
+| `sudo systemctl start` | start a service | `sudo systemctl start nginx` | start the nginx service |
+| `sudo systemctl stop` | stop a service. | `sudo systemctl stop nginx` | stop the nginx service |
+| `sudo systemctl restart` | restart a service | `sudo systemctl restart nginx` | restart the nginx service |
+| `sudo systemctl reload` | reload a service. | `sudo systemctl reload nginx` | reload service configuration without stopping the service |
+| `sudo systemctl list-units` | shows you high-end services running on linux. | `sudo systemctl list-units` | display active units currently loaded in the system |
+| `sudo systemctl list-units -t service` | show services currently "loaded" into the system's brain. | `sudo systemctl list-units -t service` | list all loaded services |
+| `sudo systemctl list-unit-files` | shows if service is enabled or disabled. | `sudo systemctl list-unit-files` | show all service unit files and their enabled/disabled state |
+| `sudo systemctl enable` | enable a service. | `sudo systemctl enable nginx` | enable a service to start automatically at boot |
+| `sudo systemctl disable` | disable a service. | `sudo systemctl disable nginx` | prevent a service from starting at boot |
+| `sudo systemctl is-enabled service_name` | show if a service is enabled. | `sudo systemctl is-enabled nginx` | check if nginx service is enabled |
+| `sudo systemctl list-units --state=failed` | list failed services | `sudo systemctl list-units --state=failed` | show services that failed to start |
+<p align="right"><a href="#kathys-linux-command-reference-for-devops">⬆ Back to Top</a></p>
+---
+
+## 15. Package Management
 
 | Command | My Definition / Logic | Flag / Example | Flag Definition |
 |---|---|---|---|
