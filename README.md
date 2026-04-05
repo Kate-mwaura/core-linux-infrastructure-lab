@@ -40,6 +40,7 @@ This serves as both a learning archive and a long-term reference I will continue
 |  |  | `ls -la` | viewing the list inclusive of hidden files in a long listed format. |
 |  |  | `ls -lh` | viewing the list with the size in a (h) human readable format. |
 |  |  | `ls -t` | sort files by time from the newest to the oldest. |
+|  |  | `ls -r` | sort the list in reverse order. |
 |  |  | `ls -R` | list directories recursively. |
 |  |  | `ls -d/f` | list only files or directories. |
 | `cd` | change directory from where I am to a new directory. | | |
