@@ -43,6 +43,8 @@ This serves as both a learning archive and a long-term reference I will continue
 |  |  | `ls -r` | sort the list in reverse order. |
 |  |  | `ls -R` | list directories recursively. |
 |  |  | `ls -d/f` | list only files or directories. |
+| `tree` | listing all the files, directories and subdirectories in a directory. | `tree <file_name>` | |
+|  |  | `tree -L` | list files and directories in a file to the specified depth e.g `tree -L 2` Goes exactly two folders deep, showing the top-level folders and the immediate files inside them, but stopping there. |
 | `cd` | change directory from where I am to a new directory. | | |
 |  |  | `cd ..` | move one directory up |
 |  |  | `cd ~` | go to home directory |
@@ -68,7 +70,7 @@ This serves as both a learning archive and a long-term reference I will continue
 | Command | My Definition / Logic | Flag / Example | Flag Definition |
 |---|---|---|---|
 | `cat` | cat [concatenate]→ show the content of a file. | `cat filex.txt` | |
-|  |  | `cat -n` | print the content of a file and (n)numbering the lines in the file. |
+|  |  | `cat -n` | print the content of a file and (n)number the lines in the file. |
 |  |  | `cat file1 file2` | display multiple files. |
 | `less` | print the context of a large file one page at a time. | `less -N` | print the file content on a single screen and number the lines. |
 |  |  | `n/enter` | next line |
